@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Temporary live Kinect capture files
+deployment/live/
+
+# Training checkpoints
+outputs/**/*.pt
