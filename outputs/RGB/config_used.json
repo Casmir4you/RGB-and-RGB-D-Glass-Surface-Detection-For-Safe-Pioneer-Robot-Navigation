@@ -1,0 +1,42 @@
+{
+  "experiment_name": "rgb_segformer",
+  "output_dir": "outputs/RGB_004",
+  "seed": 42,
+  "data_root": "data/RGBD_GSD",
+  "train_split": "train",
+  "val_split": "val",
+  "test_split": "test",
+  "use_manifest": true,
+  "train_manifest": "train.csv",
+  "val_manifest": "val.csv",
+  "test_manifest": "test.csv",
+  "modality": "rgb",
+  "binary_mask": true,
+  "ignore_index": 255,
+  "num_classes": 2,
+  "glass_class_id": 1,
+  "image_size": 512,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "depth_max_value": null,
+  "model_name": "nvidia/mit-b0",
+  "pretrained": true,
+  "batch_size": 2,
+  "num_workers": 4,
+  "epochs": 50,
+  "learning_rate": 6e-05,
+  "weight_decay": 0.02,
+  "warmup_epochs": 3,
+  "mixed_precision": true,
+  "grad_clip_norm": 1.0,
+  "early_stopping_patience": 12,
+  "save_best_metric": "mean_iou"
+}

@@ -1,0 +1,26 @@
+Best RGB Model: RGB_004
+Best RGB-D Model: RGBD_004
+
+Optimal Hyperparameters:
+Learning Rate = 0.00006
+Weight Decay = 0.02
+Batch Size = 2
+Image Size = 512
+Num Workers = 4
+
+Final Comparative Results
+
+RGB_004
+mIoU = 0.8234
+Glass IoU = 0.7108
+F1 = 0.8310
+FPS = 97.63
+
+RGBD_004
+mIoU = 0.8164
+Glass IoU = 0.6980
+F1 = 0.8222
+FPS = 87.18
+
+Final Recommendation:
+RGB_004 selected for deployment.

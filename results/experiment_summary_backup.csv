@@ -1,0 +1,4 @@
+Experiment,Modality,Best_Epoch,Pixel_Accuracy,Mean_IoU,Glass_IoU,Glass_Precision,Glass_Recall,Glass_F1,Inference_Time_ms,FPS
+Experiment,Modality,Best_Epoch,Pixel_Accuracy,Mean_IoU,Glass_IoU,Glass_Precision,Glass_Recall,Glass_F1,Inference_Time_ms,FPS
+RGB_001,RGB,41,0.9429,0.8152,0.6961,0.8358,0.8063,0.8208,24.89,40.17
+RGBD_001,RGB-D,37,0.9408,0.8085,0.6850,0.8333,0.7938,0.8130,32.31,30.95

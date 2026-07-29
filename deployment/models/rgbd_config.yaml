@@ -1,0 +1,42 @@
+experiment_name: rgbd_segformer
+output_dir: outputs/RGBD_004
+seed: 42
+
+# Dataset
+data_root: data/RGBD_GSD
+train_split: train
+val_split: val
+test_split: test
+use_manifest: true
+train_manifest: train.csv
+val_manifest: val.csv
+test_manifest: test.csv
+modality: rgbd
+binary_mask: true
+ignore_index: 255
+num_classes: 2
+glass_class_id: 1
+
+# Image settings
+image_size: 512
+mean: [0.485, 0.456, 0.406, 0.5]
+std: [0.229, 0.224, 0.225, 0.25]
+depth_max_value: null
+
+# Model
+model_name: nvidia/mit-b0
+pretrained: true
+
+# Training
+batch_size: 2
+num_workers: 4
+epochs: 50
+learning_rate: 0.00006
+weight_decay: 0.02
+warmup_epochs: 3
+mixed_precision: true
+grad_clip_norm: 1.0
+
+# Checkpointing
+early_stopping_patience: 12
+save_best_metric: mean_iou
