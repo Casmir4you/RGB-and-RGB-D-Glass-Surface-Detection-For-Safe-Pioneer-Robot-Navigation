@@ -1,14 +1,15 @@
 # RGB versus Early-Fusion RGB-D Glass Segmentation
+
 ### A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.7-red.svg)
-![Transformers](https://img.shields.io/badge/HuggingFace-SegFormer-yellow)
-![CUDA](https://img.shields.io/badge/CUDA-12.x-success)
-![Platform](https://img.shields.io/badge/Platform-Pioneer%20P3--DX-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+!\[Python](https://img.shields.io/badge/Python-3.11-blue.svg)
+!\[PyTorch](https://img.shields.io/badge/PyTorch-2.7-red.svg)
+!\[Transformers](https://img.shields.io/badge/HuggingFace-SegFormer-yellow)
+!\[CUDA](https://img.shields.io/badge/CUDA-12.x-success)
+!\[Platform](https://img.shields.io/badge/Platform-Pioneer%20P3--DX-blue)
+!\[License](https://img.shields.io/badge/License-MIT-green)
 
 **Official implementation accompanying the research paper**
 
@@ -16,7 +17,7 @@
 
 </div>
 
----
+\---
 
 # Overview
 
@@ -28,8 +29,8 @@ This repository accompanies the research paper **"RGB versus Early-Fusion RGB-D 
 
 Rather than comparing unrelated models, this work evaluates two closely matched variants of the SegFormer-B0 architecture:
 
-- **RGB SegFormer-B0**
-- **Early-Fusion RGB-D SegFormer-B0**
+* **RGB SegFormer-B0**
+* **Early-Fusion RGB-D SegFormer-B0**
 
 The RGB-D model differs from the RGB baseline only by extending the first convolutional layer to accept a fourth depth channel. All remaining architectural components, optimisation settings, training procedures, checkpoint selection criteria, and evaluation protocols are held constant throughout the study. This design isolates the effect of depth information and enables a fair assessment of its contribution to transparent glass segmentation performance.
 
@@ -37,12 +38,12 @@ Beyond benchmark evaluation, the trained models are deployed on a Pioneer P3-DX 
 
 The repository contains the complete implementation required to reproduce the study, including training scripts, evaluation code, configuration files, deployment software, trained model checkpoints, benchmark results, qualitative visualisations, deployment outputs, and supporting documentation.
 
----
+\---
 
 ## Representative Comparison
 
 <p align="center">
-  <img src="results/comparison_panels/00000210_comparison.png" width="900" alt="Comparison between RGB and RGB-D glass segmentation predictions">
+  <img src="results/comparison\_panels/00000210\_comparison.png" width="900" alt="Comparison between RGB and RGB-D glass segmentation predictions">
 </p>
 
 <p align="center">
@@ -51,74 +52,74 @@ The repository contains the complete implementation required to reproduce the st
 
 # Research at a Glance
 
-| Item | Description |
-|------|-------------|
-| Task | Transparent Glass Semantic Segmentation |
-| Models | RGB SegFormer-B0 & Early-Fusion RGB-D SegFormer-B0 |
-| Dataset | RGBD-GSD |
-| Classes | Glass / Background |
-| Framework | PyTorch + Hugging Face Transformers |
-| Robot Platform | Pioneer P3-DX |
-| Depth Sensor | Microsoft Kinect |
-| Evaluation | Benchmark + Real Robot Deployment |
+|Item|Description|
+|-|-|
+|Task|Transparent Glass Semantic Segmentation|
+|Models|RGB SegFormer-B0 \& Early-Fusion RGB-D SegFormer-B0|
+|Dataset|RGBD-GSD|
+|Classes|Glass / Background|
+|Framework|PyTorch + Hugging Face Transformers|
+|Robot Platform|Pioneer P3-DX|
+|Depth Sensor|Microsoft Kinect|
+|Evaluation|Benchmark + Real Robot Deployment|
 
 # Key Contributions
 
 This repository provides:
 
-- A fully reproducible implementation of a controlled RGB versus RGB-D transparent glass segmentation benchmark.
-- An implementation of an early-fusion RGB-D SegFormer-B0 architecture using a four-channel input representation.
-- Identical optimisation, training, validation, and evaluation procedures for both RGB and RGB-D models to ensure fair comparison.
-- Training and evaluation pipelines for the RGB-D Glass Surface Detection (RGBD-GSD) dataset.
-- Complete benchmark metrics including Pixel Accuracy, Mean Intersection-over-Union (mIoU), Precision, Recall, F1-score, and per-class IoU.
-- Deployment software for integrating trained segmentation models with a Pioneer P3-DX mobile robot.
-- Qualitative comparisons illustrating segmentation behaviour across representative benchmark samples.
-- Representative deployment outputs demonstrating real-world semantic glass detection during robot navigation.
-- Comprehensive documentation describing repository structure, experimental methodology, deployment procedures, and reproduction steps.
+* A fully reproducible implementation of a controlled RGB versus RGB-D transparent glass segmentation benchmark.
+* An implementation of an early-fusion RGB-D SegFormer-B0 architecture using a four-channel input representation.
+* Identical optimisation, training, validation, and evaluation procedures for both RGB and RGB-D models to ensure fair comparison.
+* Training and evaluation pipelines for the RGB-D Glass Surface Detection (RGBD-GSD) dataset.
+* Complete benchmark metrics including Pixel Accuracy, Mean Intersection-over-Union (mIoU), Precision, Recall, F1-score, and per-class IoU.
+* Deployment software for integrating trained segmentation models with a Pioneer P3-DX mobile robot.
+* Qualitative comparisons illustrating segmentation behaviour across representative benchmark samples.
+* Representative deployment outputs demonstrating real-world semantic glass detection during robot navigation.
+* Comprehensive documentation describing repository structure, experimental methodology, deployment procedures, and reproduction steps.
 
----
+\---
 
 # Repository Highlights
 
-- ✅  Controlled comparison between RGB and RGB-D perception
-- ✅  Identical SegFormer-B0 backbone for both models
-- ✅  Benchmark evaluation using the RGBD-GSD dataset
-- ✅  Practical deployment on a Pioneer P3-DX mobile robot
-- ✅  Reproducible training and evaluation pipeline
-- ✅  Complete deployment framework included
-- ✅  Trained model checkpoints provided
-- ✅  Qualitative visualisation utilities included
-- ✅  Deployment demonstrations and representative outputs provided
-- ✅  Detailed documentation for reproducibility
+* ✅  Controlled comparison between RGB and RGB-D perception
+* ✅  Identical SegFormer-B0 backbone for both models
+* ✅  Benchmark evaluation using the RGBD-GSD dataset
+* ✅  Practical deployment on a Pioneer P3-DX mobile robot
+* ✅  Reproducible training and evaluation pipeline
+* ✅  Complete deployment framework included
+* ✅  Trained model checkpoints provided
+* ✅  Qualitative visualisation utilities included
+* ✅  Deployment demonstrations and representative outputs provided
+* ✅  Detailed documentation for reproducibility
 
----
+\---
 
 
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Representative Comparison](#representative-comparison)
-- [Research at a Glance](#research-at-a-glance)
-- [Key Contributions](#key-contributions)
-- [Repository Highlights](#repository-highlights)
-- [Quick Start](#quick-start)
-- [Repository Structure](#repository-structure)
-- [Experimental Methodology](#experimental-methodology)
-- [Installation](#installation)
-- [Dataset Preparation](#dataset-preparation)
-- [Training](#training)
-- [Model Evaluation](#model-evaluation)
-- [Benchmark Results](#benchmark-results)
-- [Practical Robot Deployment](#practical-robot-deployment)
-- [Qualitative Analysis](#qualitative-analysis)
-- [Documentation](#documentation)
-- [Citation](#citation)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
+* [Overview](#overview)
+* [Representative Comparison](#representative-comparison)
+* [Research at a Glance](#research-at-a-glance)
+* [Key Contributions](#key-contributions)
+* [Repository Highlights](#repository-highlights)
+* [Quick Start](#quick-start)
+* [Repository Structure](#repository-structure)
+* [Experimental Methodology](#experimental-methodology)
+* [Installation](#installation)
+* [Dataset Preparation](#dataset-preparation)
+* [Training](#training)
+* [Model Evaluation](#model-evaluation)
+* [Benchmark Results](#benchmark-results)
+* [Practical Robot Deployment](#practical-robot-deployment)
+* [Qualitative Analysis](#qualitative-analysis)
+* [Documentation](#documentation)
+* [Citation](#citation)
+* [License](#license)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
 
----
+\---
 
 # Quick Start
 
@@ -134,6 +135,7 @@ python src/evaluate.py
 
 For complete installation instructions, dataset preparation, deployment, and experiment configuration, continue with the sections below.
 ```
+
 <details>
 
 <summary><strong>Repository Structure (Click to Expand)</strong></summary>
@@ -170,7 +172,7 @@ The repository follows the natural workflow of the research presented in the acc
 
 This structure allows each stage of the research pipeline to remain independent while sharing common configuration files and utilities.
 
----
+\---
 
 # Directory Overview
 
@@ -178,14 +180,14 @@ This structure allows each stage of the research pipeline to remain independent 
 
 The repository root contains the primary project files together with the folders required for training, evaluation, deployment, documentation, and experimental results.
 
-| Item | Description |
-|------|-------------|
-| `README.md` | Main project documentation and usage guide. |
-| `LICENSE` | Repository license information. |
-| `requirements.txt` | Python dependencies required for reproducing the experiments. |
-| `.gitignore` | Files and directories excluded from version control. |
+|Item|Description|
+|-|-|
+|`README.md`|Main project documentation and usage guide.|
+|`LICENSE`|Repository license information.|
+|`requirements.txt`|Python dependencies required for reproducing the experiments.|
+|`.gitignore`|Files and directories excluded from version control.|
 
----
+\---
 
 # configs/
 
@@ -201,7 +203,7 @@ These configuration files define the experimental settings for each model, inclu
 
 Maintaining separate configuration files ensures that both RGB and RGB-D experiments remain fully reproducible while keeping the training code identical across both experimental conditions.
 
----
+\---
 
 # src/
 
@@ -221,35 +223,35 @@ src/
 
 This directory forms the core of the benchmark implementation and contains all source code required for model training, inference, and evaluation.
 
----
+\---
 
 ## src/datasets/
 
 ```
 datasets/
-└── rgbd_gsd_dataset.py
+└── rgbd\_gsd\_dataset.py
 ```
 
 This module implements the RGBD-GSD dataset loader.
 
 Its responsibilities include:
 
-- loading RGB images,
-- loading aligned depth images,
-- loading segmentation masks,
-- applying preprocessing,
-- converting annotations into training tensors,
-- supporting both RGB and RGB-D experimental configurations.
+* loading RGB images,
+* loading aligned depth images,
+* loading segmentation masks,
+* applying preprocessing,
+* converting annotations into training tensors,
+* supporting both RGB and RGB-D experimental configurations.
 
 The dataset implementation allows a single codebase to support both perception modalities while ensuring that only the model input changes between experiments.
 
----
+\---
 
 ## src/models/
 
 ```
 models/
-└── segformer_rgbd.py
+└── segformer\_rgbd.py
 ```
 
 This directory contains the implementation of the modified SegFormer-B0 architecture used throughout the study.
@@ -260,7 +262,7 @@ The RGB-D implementation extends the first patch embedding layer to receive an a
 
 This implementation reflects the controlled experimental methodology presented in the accompanying paper by ensuring that depth is the only architectural variable introduced into the comparison.
 
----
+\---
 
 ## src/utils/
 
@@ -276,16 +278,16 @@ These utility modules provide reusable functionality shared across training, eva
 
 Their responsibilities include:
 
-- configuration loading,
-- experiment reproducibility,
-- random seed initialisation,
-- segmentation metric computation,
-- visualisation generation,
-- helper functions used throughout the project.
+* configuration loading,
+* experiment reproducibility,
+* random seed initialisation,
+* segmentation metric computation,
+* visualisation generation,
+* helper functions used throughout the project.
 
 Separating these components improves code readability while reducing duplication across the repository.
 
----
+\---
 
 # scripts/
 
@@ -293,29 +295,29 @@ The **scripts** directory contains helper utilities used during dataset preparat
 
 ```
 scripts/
-├── download_rgbd_gsd.py
-├── export_rgbd_gsd.py
-├── inspect_dataset.py
-├── inspect_depth_channel.py
-├── make_comparison_panels.py
-├── test_loader.py
-├── train_rgb.sh
-├── train_rgbd.sh
+├── download\_rgbd\_gsd.py
+├── export\_rgbd\_gsd.py
+├── inspect\_dataset.py
+├── inspect\_depth\_channel.py
+├── make\_comparison\_panels.py
+├── test\_loader.py
+├── train\_rgb.sh
+├── train\_rgbd.sh
 └── evaluate.sh
 ```
 
 These scripts automate many of the repetitive tasks required during experimentation, including:
 
-- dataset preparation,
-- dataset inspection,
-- depth verification,
-- training execution,
-- evaluation,
-- qualitative comparison generation.
+* dataset preparation,
+* dataset inspection,
+* depth verification,
+* training execution,
+* evaluation,
+* qualitative comparison generation.
 
 Keeping these utilities separate from the core implementation improves maintainability and simplifies experiment reproduction.
 
----
+\---
 
 # outputs/
 
@@ -329,21 +331,21 @@ outputs/
 
 Each experiment contains:
 
-- training history,
-- configuration used,
-- quantitative benchmark metrics.
+* training history,
+* configuration used,
+* quantitative benchmark metrics.
 
 Typical files include:
 
 ```
 history.json
-config_used.json
-test_metrics.json
+config\_used.json
+test\_metrics.json
 ```
 
 These outputs provide a complete record of each experiment and support reproducibility of the reported benchmark results.
 
----
+\---
 
 # results/
 
@@ -352,10 +354,10 @@ The **results** directory contains the final artefacts generated throughout the 
 ```
 results/
 │
-├── experiment_summary.csv
-├── final_model_summary.txt
-├── comparison_panels/
-├── qualitative_analysis/
+├── experiment\_summary.csv
+├── final\_model\_summary.txt
+├── comparison\_panels/
+├── qualitative\_analysis/
 │   ├── rgb/
 │   └── rgbd/
 │
@@ -367,32 +369,32 @@ This directory contains the figures and summaries presented throughout the repos
 
 It includes:
 
-- consolidated benchmark summaries,
-- representative deployment outputs,
-- qualitative segmentation comparisons,
-- visual overlays,
-- comparison panels generated from benchmark predictions.
+* consolidated benchmark summaries,
+* representative deployment outputs,
+* qualitative segmentation comparisons,
+* visual overlays,
+* comparison panels generated from benchmark predictions.
 
 Rather than recreating figures during documentation, the README and supporting documents reference these existing assets directly.
 
----
+\---
 
-## comparison_panels/
+## comparison\_panels/
 
 ```
-results/comparison_panels/
+results/comparison\_panels/
 ```
 
 This directory contains side-by-side comparison panels illustrating representative segmentation examples.
 
 Each panel enables visual comparison between RGB predictions and RGB-D predictions for the same benchmark image, providing an intuitive assessment of segmentation behaviour.
 
----
+\---
 
-## qualitative_analysis/
+## qualitative\_analysis/
 
 ```
-results/qualitative_analysis/
+results/qualitative\_analysis/
 ├── rgb/
 └── rgbd/
 ```
@@ -401,12 +403,12 @@ This directory stores qualitative prediction outputs for both models.
 
 Each modality contains:
 
-- predicted segmentation masks,
-- coloured overlay visualisations.
+* predicted segmentation masks,
+* coloured overlay visualisations.
 
 These visualisations complement the quantitative benchmark metrics by demonstrating how each model performs on representative transparent glass scenes.
 
----
+\---
 
 # deployment/
 
@@ -415,9 +417,10 @@ The **deployment** directory contains the complete software framework used to de
 Unlike many semantic segmentation repositories that conclude with benchmark evaluation, this repository extends the study into practical robotic deployment, allowing semantic predictions to influence robot navigation behaviour.
 
 The deployment framework is described in detail later in this documentation.
+
 </details>
 
----
+\---
 
 <details>
 
@@ -438,7 +441,7 @@ The complete experimental pipeline consists of six stages:
 
 Each stage was performed using identical experimental settings for both RGB and RGB-D models unless the modification being investigated explicitly required otherwise.
 
----
+\---
 
 # Controlled Experimental Design
 
@@ -448,31 +451,31 @@ This repository adopts a controlled experimental methodology in which the RGB mo
 
 The following components remain identical between both experiments:
 
-- SegFormer-B0 backbone architecture
-- Encoder and decoder design
-- Dataset
-- Training images
-- Validation images
-- Test images
-- Image resolution
-- Data preprocessing pipeline
-- Loss function
-- Optimiser
-- Learning rate schedule
-- Weight decay
-- Mixed precision training
-- Batch size
-- Number of training epochs
-- Early stopping strategy
-- Checkpoint selection criterion
-- Evaluation metrics
-- Hardware platform
+* SegFormer-B0 backbone architecture
+* Encoder and decoder design
+* Dataset
+* Training images
+* Validation images
+* Test images
+* Image resolution
+* Data preprocessing pipeline
+* Loss function
+* Optimiser
+* Learning rate schedule
+* Weight decay
+* Mixed precision training
+* Batch size
+* Number of training epochs
+* Early stopping strategy
+* Checkpoint selection criterion
+* Evaluation metrics
+* Hardware platform
 
 The only architectural modification is the extension of the first patch embedding layer from three input channels (RGB) to four input channels (RGB-D).
 
 By maintaining all other experimental conditions unchanged, the study provides a fair comparison of RGB and RGB-D perception for transparent glass segmentation.
 
----
+\---
 
 # RGB-D Early-Fusion Strategy
 
@@ -493,7 +496,7 @@ To preserve compatibility with pretrained ImageNet weights, the original three-c
 
 Apart from this modification, the remainder of the SegFormer-B0 architecture remains unchanged.
 
----
+\---
 
 # Dataset
 
@@ -503,18 +506,18 @@ The dataset provides aligned RGB images, depth images, and pixel-level annotatio
 
 Each sample contains:
 
-- RGB image
-- Depth image
-- Binary segmentation mask
+* RGB image
+* Depth image
+* Binary segmentation mask
 
 The segmentation task consists of two semantic classes:
 
-- Glass
-- Background
+* Glass
+* Background
 
 The repository includes scripts for dataset preparation, inspection, and export to facilitate experiment reproduction.
 
----
+\---
 
 # Training Pipeline
 
@@ -555,15 +558,15 @@ Each experiment follows the same optimisation procedure to ensure consistency th
 
 Training includes:
 
-- mixed precision computation,
-- gradient clipping,
-- learning rate warm-up,
-- checkpoint monitoring,
-- early stopping.
+* mixed precision computation,
+* gradient clipping,
+* learning rate warm-up,
+* checkpoint monitoring,
+* early stopping.
 
 The best-performing checkpoint is selected according to validation Mean Intersection-over-Union (mIoU), ensuring that both models are evaluated using identical selection criteria.
 
----
+\---
 
 # Benchmark Evaluation
 
@@ -573,17 +576,17 @@ Performance is assessed using multiple complementary metrics rather than relying
 
 The benchmark reports:
 
-- Pixel Accuracy
-- Mean Intersection-over-Union (mIoU)
-- Glass IoU
-- Background IoU
-- Precision
-- Recall
-- F1-score
+* Pixel Accuracy
+* Mean Intersection-over-Union (mIoU)
+* Glass IoU
+* Background IoU
+* Precision
+* Recall
+* F1-score
 
 Reporting multiple metrics provides a more complete assessment of segmentation quality by measuring both overall pixel agreement and class-specific performance.
 
----
+\---
 
 # Qualitative Analysis
 
@@ -593,9 +596,9 @@ To complement the numerical evaluation, representative prediction examples are g
 
 The repository includes:
 
-- predicted segmentation masks,
-- coloured overlay visualisations,
-- side-by-side comparison panels.
+* predicted segmentation masks,
+* coloured overlay visualisations,
+* side-by-side comparison panels.
 
 These visualisations allow researchers to inspect how each model responds to challenging transparent glass scenes, including variations in illumination, reflections, background clutter, and glass geometry.
 
@@ -603,11 +606,11 @@ Representative examples are available in:
 
 ```
 results/
-├── comparison_panels/
-└── qualitative_analysis/
+├── comparison\_panels/
+└── qualitative\_analysis/
 ```
 
----
+\---
 
 # Deployment Evaluation Method
 
@@ -625,7 +628,7 @@ This deployment pipeline enables investigation of an important research question
 
 By combining controlled benchmark evaluation with practical deployment, the repository bridges the gap between computer vision performance metrics and robotic navigation behaviour.
 
----
+\---
 
 # Reproducibility
 
@@ -633,45 +636,47 @@ A primary objective of this repository is to support reproducible research.
 
 Accordingly, the repository includes:
 
-- complete source code,
-- experiment configuration files,
-- training scripts,
-- evaluation scripts,
-- deployment software,
-- trained model checkpoints,
-- quantitative benchmark outputs,
-- qualitative visualisations,
-- representative deployment results,
-- comprehensive documentation.
+* complete source code,
+* experiment configuration files,
+* training scripts,
+* evaluation scripts,
+* deployment software,
+* trained model checkpoints,
+* quantitative benchmark outputs,
+* qualitative visualisations,
+* representative deployment results,
+* comprehensive documentation.
 
 Researchers can therefore reproduce the complete experimental pipeline—from model training through to real-world deployment—using the resources provided within this repository.
+
 </details>
 
----
+\---
+
 
 
 # Installation
 
 This repository was developed and tested using Python 3.11 together with PyTorch and the Hugging Face Transformers library. The implementation is platform-independent and can be executed on Windows or Linux systems equipped with a CUDA-compatible NVIDIA GPU. Although CPU execution is supported, GPU acceleration is strongly recommended due to the computational requirements of semantic segmentation training.
 
----
+\---
 
 # System Requirements
 
 The following hardware configuration is recommended for reproducing the benchmark experiments.
 
-| Component | Recommendation |
-|-----------|---------------|
-| Operating System | Windows 10/11 or Ubuntu 22.04+ |
-| Python | 3.11 |
-| GPU | NVIDIA CUDA-compatible GPU |
-| CUDA | CUDA 12.x |
-| RAM | Minimum 16 GB |
-| Storage | At least 20 GB free space |
+|Component|Recommendation|
+|-|-|
+|Operating System|Windows 10/11 or Ubuntu 22.04+|
+|Python|3.11|
+|GPU|NVIDIA CUDA-compatible GPU|
+|CUDA|CUDA 12.x|
+|RAM|Minimum 16 GB|
+|Storage|At least 20 GB free space|
 
 The deployment framework additionally requires a Pioneer P3-DX mobile robot together with a Microsoft Kinect depth camera for real-world experiments.
 
----
+\---
 
 # Clone the Repository
 
@@ -683,7 +688,7 @@ git clone https://github.com/Casmir4you/RGB-and-RGB-D-Glass-Surface-Detection-Fo
 cd RGB-and-RGB-D-Glass-Surface-Detection-For-Safe-Pioneer-Robot-Navigation
 ```
 
----
+\---
 
 # Create a Python Virtual Environment
 
@@ -694,7 +699,7 @@ A dedicated virtual environment is recommended to avoid dependency conflicts.
 ```bash
 python -m venv venv
 
-venv\Scripts\activate
+venv\\Scripts\\activate
 ```
 
 ### Linux
@@ -705,7 +710,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
----
+\---
 
 # Install Dependencies
 
@@ -720,13 +725,13 @@ After installation, verify that PyTorch can detect your CUDA-enabled GPU.
 ```python
 import torch
 
-print(torch.cuda.is_available())
-print(torch.cuda.get_device_name(0))
+print(torch.cuda.is\_available())
+print(torch.cuda.get\_device\_name(0))
 ```
 
 A successful installation should report your available NVIDIA GPU.
 
----
+\---
 
 # Repository Configuration
 
@@ -746,17 +751,17 @@ configs/
 
 These files specify:
 
-- dataset locations
-- batch size
-- learning rate
-- optimiser settings
-- checkpoint paths
-- training parameters
-- evaluation parameters
+* dataset locations
+* batch size
+* learning rate
+* optimiser settings
+* checkpoint paths
+* training parameters
+* evaluation parameters
 
 Researchers can reproduce the published experiments directly using these configuration files or modify them to investigate alternative experimental settings.
 
----
+\---
 
 # Dataset Preparation
 
@@ -775,18 +780,18 @@ scripts/
 Available helper scripts include
 
 ```
-download_rgbd_gsd.py
+download\_rgbd\_gsd.py
 
-export_rgbd_gsd.py
+export\_rgbd\_gsd.py
 
-inspect_dataset.py
+inspect\_dataset.py
 
-inspect_depth_channel.py
+inspect\_depth\_channel.py
 ```
 
 These utilities assist with dataset preparation and verification prior to model training.
 
----
+\---
 
 # Inspecting the Dataset
 
@@ -795,7 +800,7 @@ Before training, it is recommended to verify that the RGB images, depth images, 
 Run
 
 ```bash
-python scripts/inspect_dataset.py
+python scripts/inspect\_dataset.py
 ```
 
 to inspect representative samples.
@@ -803,12 +808,12 @@ to inspect representative samples.
 Depth images may also be examined independently using
 
 ```bash
-python scripts/inspect_depth_channel.py
+python scripts/inspect\_depth\_channel.py
 ```
 
 Verifying the dataset before training helps identify missing files, incorrect directory structures, or alignment issues that could adversely affect model performance.
 
----
+\---
 
 # Training
 
@@ -844,7 +849,7 @@ The common training script is located in
 src/train.py
 ```
 
----
+\---
 
 ## Training the RGB Model
 
@@ -857,12 +862,12 @@ python src/train.py --config configs/rgb.yaml
 Alternatively,
 
 ```bash
-bash scripts/train_rgb.sh
+bash scripts/train\_rgb.sh
 ```
 
 may be used on systems supporting shell scripts.
 
----
+\---
 
 ## Training the RGB-D Model
 
@@ -875,14 +880,14 @@ python src/train.py --config configs/rgbd.yaml
 or
 
 ```bash
-bash scripts/train_rgbd.sh
+bash scripts/train\_rgbd.sh
 ```
 
 The RGB-D configuration extends the RGB baseline by introducing a fourth input channel corresponding to the aligned depth image.
 
 No additional architectural changes are introduced beyond this modification.
 
----
+\---
 
 # Training Outputs
 
@@ -905,16 +910,16 @@ outputs/
 Typical output files include
 
 ```
-config_used.json
+config\_used.json
 
 history.json
 
-test_metrics.json
+test\_metrics.json
 ```
 
 These files provide a permanent record of the experiment configuration, optimisation history, and quantitative evaluation metrics.
 
----
+\---
 
 # Model Evaluation
 
@@ -934,16 +939,16 @@ Evaluation computes all benchmark metrics reported in the accompanying paper.
 
 These include
 
-- Pixel Accuracy
-- Mean Intersection-over-Union (mIoU)
-- Precision
-- Recall
-- F1-score
-- Per-class IoU
+* Pixel Accuracy
+* Mean Intersection-over-Union (mIoU)
+* Precision
+* Recall
+* F1-score
+* Per-class IoU
 
 The resulting metrics are saved automatically within the experiment output directory.
 
----
+\---
 
 # Inference
 
@@ -963,33 +968,33 @@ src/utils/
 
 or incorporated into the qualitative comparison pipeline.
 
----
+\---
 
 # Generating Qualitative Comparisons
 
 Representative qualitative visualisations can be generated using
 
 ```
-scripts/make_comparison_panels.py
+scripts/make\_comparison\_panels.py
 ```
 
 The generated figures are stored in
 
 ```
-results/comparison_panels/
+results/comparison\_panels/
 ```
 
 Additional RGB and RGB-D overlay visualisations are available in
 
 ```
-results/qualitative_analysis/
+results/qualitative\_analysis/
 ├── rgb/
 └── rgbd/
 ```
 
 These figures provide an intuitive visual comparison of segmentation behaviour across representative benchmark images and complement the quantitative evaluation metrics reported throughout the study.
 
----
+\---
 
 # Benchmark Results
 
@@ -999,37 +1004,38 @@ The benchmark results demonstrate that the RGB baseline achieved slightly strong
 
 ## Quantitative Performance
 
-| Metric | RGB | RGB-D |
-|---------|-----:|------:|
-| Pixel Accuracy | **0.9448** | 0.9428 |
-| Mean IoU | **0.8234** | 0.8158 |
-| Glass IoU | **0.7108** | 0.6983 |
-| Background IoU | **0.9360** | 0.9334 |
-| Precision | 0.8247 | **0.8276** |
-| Recall | **0.8376** | 0.8191 |
-| F1 Score | **0.8310** | 0.8233 |
+|Metric|RGB|RGB-D|
+|-|-:|-:|
+|Pixel Accuracy|**0.9448**|0.9428|
+|Mean IoU|**0.8234**|0.8158|
+|Glass IoU|**0.7108**|0.6983|
+|Background IoU|**0.9360**|0.9334|
+|Precision|0.8247|**0.8276**|
+|Recall|**0.8376**|0.8191|
+|F1 Score|**0.8310**|0.8233|
 
 The benchmark indicates that both models achieve strong segmentation performance; however, the RGB model consistently provides higher overlap with the ground-truth glass regions and achieves better overall balance between precision and recall.
 
----
+\---
 
 # Experimental Summary
 
 The controlled design of the study allows several important conclusions.
 
-- Both models achieved high semantic segmentation accuracy.
-- RGB slightly outperformed RGB-D on the benchmark dataset.
-- RGB-D produced slightly higher precision but lower recall.
-- Benchmark improvements did not automatically translate into improved deployment behaviour.
-- The addition of raw depth information alone was insufficient to consistently improve transparent glass segmentation.
+* Both models achieved high semantic segmentation accuracy.
+* RGB slightly outperformed RGB-D on the benchmark dataset.
+* RGB-D produced slightly higher precision but lower recall.
+* Benchmark improvements did not automatically translate into improved deployment behaviour.
+* The addition of raw depth information alone was insufficient to consistently improve transparent glass segmentation.
 
 These findings demonstrate the importance of controlled experimentation when evaluating multimodal perception systems.
 
----
+\---
 
 # Practical Robot Deployment
 
 Unlike many semantic segmentation repositories, this project extends beyond benchmark evaluation by validating the trained models during real-world deployment on a Pioneer P3-DX mobile robot.
+
 ## RGB Model Deployment
 
 <p align="center">
@@ -1041,6 +1047,7 @@ Unlike many semantic segmentation repositories, this project extends beyond benc
 <p align="center">
 <em>Representative terminal output from deployment of the RGB model.</em>
 </p>
+
 
 
 ## RGB-D Model Deployment
@@ -1066,24 +1073,24 @@ deployment/
 and includes
 
 ```
-kinect_capture.py
+kinect\_capture.py
 
 navigation.py
 
-robot_controller.py
+robot\_controller.py
 
-rgb_inference.py
+rgb\_inference.py
 
-rgbd_inference.py
+rgbd\_inference.py
 
-pioneer_rgb_deployment.py
+pioneer\_rgb\_deployment.py
 
-pioneer_rgbd_deployment.py
+pioneer\_rgbd\_deployment.py
 ```
 
 together with deployment-specific configuration files and trained model checkpoints.
 
----
+\---
 
 # Deployment Performance
 
@@ -1091,14 +1098,14 @@ Practical deployment demonstrates that benchmark performance alone does not full
 
 Across representative deployment trials:
 
-- Both models successfully detected transparent glass in practical environments.
-- Neither model generated false detections during representative non-glass navigation scenarios.
-- The RGB model produced more consistent semantic trigger behaviour than the RGB-D implementation.
-- RGB maintained lower inference latency, making it better suited for real-time deployment.
+* Both models successfully detected transparent glass in practical environments.
+* Neither model generated false detections during representative non-glass navigation scenarios.
+* The RGB model produced more consistent semantic trigger behaviour than the RGB-D implementation.
+* RGB maintained lower inference latency, making it better suited for real-time deployment.
 
 These observations reinforce the importance of evaluating perception algorithms under realistic operating conditions rather than relying exclusively on benchmark metrics.
 
----
+\---
 
 # Representative Deployment Outputs
 
@@ -1114,7 +1121,7 @@ results/
 
 These examples illustrate the complete deployment pipeline from camera acquisition through semantic inference to navigation decision making.
 
----
+\---
 
 # Qualitative Analysis
 
@@ -1123,7 +1130,7 @@ Quantitative metrics provide a numerical summary of segmentation performance, wh
 ## Representative RGB Prediction
 
 <p align="center">
-  <img src="results/qualitative_analysis/rgb/00000210_rgb_overlay.png" width="700" alt="Representative RGB glass segmentation prediction">
+  <img src="results/qualitative\_analysis/rgb/00000210\_rgb\_overlay.png" width="700" alt="Representative RGB glass segmentation prediction">
 </p>
 
 <p align="center">
@@ -1133,7 +1140,7 @@ Quantitative metrics provide a numerical summary of segmentation performance, wh
 ## Representative RGB-D Prediction
 
 <p align="center">
-  <img src="results/qualitative_analysis/rgbd/00000210_rgbd_overlay.png" width="700" alt="Representative RGB-D glass segmentation prediction">
+  <img src="results/qualitative\_analysis/rgbd/00000210\_rgbd\_overlay.png" width="700" alt="Representative RGB-D glass segmentation prediction">
 </p>
 
 <p align="center">
@@ -1141,12 +1148,13 @@ Quantitative metrics provide a numerical summary of segmentation performance, wh
 </p>
 
 
+
 Additional representative prediction overlays for both RGB and RGB-D models are available in
 
 ```
 results/
 
-└── qualitative_analysis/
+└── qualitative\_analysis/
 
     ├── rgb/
 
@@ -1155,57 +1163,74 @@ results/
 
 Each directory contains
 
-- predicted segmentation masks,
-- coloured prediction overlays,
-- representative benchmark examples.
+* predicted segmentation masks,
+* coloured prediction overlays,
+* representative benchmark examples.
 
 These visualisations allow researchers to examine how each model responds to challenging transparent glass scenes under varying lighting conditions, reflections, and background complexity.
 
----
+\---
 
 # Side-by-Side Comparison Panels
 
 Direct visual comparisons between RGB and RGB-D predictions are provided in
 
 ```
-results/comparison_panels/
+results/comparison\_panels/
 ```
 
 Each comparison panel presents corresponding predictions from both models for the same benchmark image, allowing qualitative assessment alongside the reported benchmark metrics.
 
----
+\---
 
 # Documentation
 
 Additional documentation is available within the `docs/` directory.
 
-| Document | Description |
-|----------|-------------|
-| `methodology.md` | Detailed explanation of the controlled experimental design. |
-| `repository-structure.md` | Comprehensive overview of the repository organisation. |
-| `installation.md` | Environment setup and dependency installation. |
-| `experiments.md` | Training and evaluation workflow. |
-| `deployment.md` | Pioneer P3-DX deployment framework. |
-| `results.md` | Detailed interpretation of benchmark and deployment results. |
+|Document|Description|
+|-|-|
+|`methodology.md`|Detailed explanation of the controlled experimental design.|
+|`repository-structure.md`|Comprehensive overview of the repository organisation.|
+|`installation.md`|Environment setup and dependency installation.|
+|`experiments.md`|Training and evaluation workflow.|
+|`deployment.md`|Pioneer P3-DX deployment framework.|
+|`results.md`|Detailed interpretation of benchmark and deployment results.|
 
----
+\---
 
-# Citation
+# \## Citation
 
-If you use this repository in your research, please cite the accompanying paper.
+# 
 
-```bibtex
-@misc{amasiatu2026rgbdglass,
-  title        = {RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX},
-  author       = {Ebubechukwu Amasiatu and Salem Ameen},
-  year         = {2026},
-  note         = {Manuscript under review}
-}
-```
+# If you use this repository, code, models, results, or associated materials in your research, please cite the accompanying published preprint:
 
-Once your paper is published, replace the above entry with the final DOI and publication details.
+# 
 
----
+# ```bibtex
+
+# @article{amasiatu2026rgbdglass,
+
+# &#x20; title   = {RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX},
+
+# &#x20; author  = {Amasiatu, Ebubechukwu and Ameen, Salem},
+
+# &#x20; year    = {2026},
+
+# &#x20; doi     = {10.31224/7926},
+
+# &#x20; url     = {https://doi.org/10.31224/7926}
+
+# }
+
+# ```
+
+# 
+
+# \*\*Published preprint:\*\*
+
+# Amasiatu, E., \& Ameen, S. (2026). \*RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX\*. https://doi.org/10.31224/7926
+
+\---
 
 # License
 
@@ -1213,24 +1238,24 @@ This project is released under the MIT License.
 
 See the `LICENSE` file for further information.
 
----
+\---
 
 # Acknowledgements
 
 The author gratefully acknowledges:
 
-- Birmingham City University
-- The School of Engineering and the Built Environment
-- The developers of SegFormer
-- Hugging Face Transformers
-- PyTorch
-- The RGBD-GSD dataset authors
-- The Pioneer P3-DX robotics platform
-- Microsoft Kinect depth sensing technology
+* Birmingham City University
+* The School of Engineering and the Built Environment
+* The developers of SegFormer
+* Hugging Face Transformers
+* PyTorch
+* The RGBD-GSD dataset authors
+* The Pioneer P3-DX robotics platform
+* Microsoft Kinect depth sensing technology
 
 Their contributions made this research possible.
 
----
+\---
 
 # Contact
 
@@ -1240,7 +1265,7 @@ Repository:
 
 **https://github.com/Casmir4you/RGB-and-RGB-D-Glass-Surface-Detection-For-Safe-Pioneer-Robot-Navigation**
 
----
+\---
 
 
 
@@ -1248,12 +1273,13 @@ Repository:
 
 If you find this repository useful for your research, please consider:
 
-- ⭐ Starring the repository
-- 📖 Citing the accompanying paper
-- 🤝 Opening an issue with questions or suggestions
+* ⭐ Starring the repository
+* 📖 Citing the accompanying paper
+* 🤝 Opening an issue with questions or suggestions
 
 <div align="center">
 
 **Thank you for your interest in this work.**
 
 </div>
+
