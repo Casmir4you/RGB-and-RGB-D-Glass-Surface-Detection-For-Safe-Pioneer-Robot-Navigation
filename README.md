@@ -1198,37 +1198,25 @@ Additional documentation is available within the `docs/` directory.
 
 \---
 
-# \## Citation
+## Citation
 
-# 
+If you use this repository, code, models, results, or associated materials in your research, please cite the accompanying published preprint:
 
-# If you use this repository, code, models, results, or associated materials in your research, please cite the accompanying published preprint:
+```bibtex
+@article{amasiatu2026rgbdglass,
+  title   = {RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX},
+  author  = {Amasiatu, Ebubechukwu and Ameen, Salem},
+  year    = {2026},
+  doi     = {10.31224/7926},
+  url     = {https://doi.org/10.31224/7926}
+}
+```
 
-# 
 
-# ```bibtex
 
-# @article{amasiatu2026rgbdglass,
+**Published preprint:**
 
-# &#x20; title   = {RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX},
-
-# &#x20; author  = {Amasiatu, Ebubechukwu and Ameen, Salem},
-
-# &#x20; year    = {2026},
-
-# &#x20; doi     = {10.31224/7926},
-
-# &#x20; url     = {https://doi.org/10.31224/7926}
-
-# }
-
-# ```
-
-# 
-
-# \*\*Published preprint:\*\*
-
-# Amasiatu, E., \& Ameen, S. (2026). \*RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX\*. https://doi.org/10.31224/7926
+Amasiatu, E., & Ameen, S. (2026). *RGB versus Early-Fusion RGB-D Glass Segmentation: A Controlled Benchmark-to-Robot Evaluation on Pioneer P3-DX*. https://doi.org/10.31224/7926
 
 \---
 
